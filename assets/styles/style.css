@@ -253,6 +253,7 @@ header li a {
   margin:-5em 0 0; /* negative fixed header height */
 }
 
+
 footer {
   background: var(--black);
   padding: 0.5em;
