@@ -1,0 +1,6 @@
+
+title: Your awesome title
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
