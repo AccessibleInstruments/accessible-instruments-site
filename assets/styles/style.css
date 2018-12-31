@@ -53,6 +53,8 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   padding: 1em;
+  position: sticky;
+  top: 0;
 }
 
 header .brand {
@@ -109,10 +111,84 @@ header li a {
   display: block;
 }
 
+#body-framework #page {
+  padding: 0;
+}
+
+#body-framework footer {
+  display: none;
+}
+
+#framework {
+  display: grid;
+  grid-template-columns: 400px auto;
+}
+
+#framework nav {
+  background: #f7f8f9;
+  overflow-y: scroll;
+  position: sticky;
+  top: 5em;
+  height: calc(100vh - 5em);
+  padding: 1em;
+}
+
+#framework nav h2 {
+  font-size: 1.25em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+#framework nav ul {
+  list-style-type: none;
+}
+
+#framework nav li ul {
+  padding-left: 1em;
+}
+
+#framework nav a {
+  color: inherit;
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+#framework article {
+  padding: 1em;
+}
+
+#framework article h1,
+#framework article h2,
+#framework article ul,
+#framework article p,
+#framework article img {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  display: block;
+  width: 100%;
+}
+
+#framework article h1:not(#introduction),
+#framework article h2 {
+  margin-top: 2em;
+}
+
+#framework article li {
+  margin: 1em 1.5em;
+}
+
+:target:before {
+  content:"";
+  display:block;
+  height:5em; /* fixed header height*/
+  margin:-5em 0 0; /* negative fixed header height */
+}
+
 footer {
   background: var(--black);
   padding: 0.5em;
   color: white;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 2em;
 }
