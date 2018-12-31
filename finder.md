@@ -1,0 +1,4 @@
+---
+layout: finder
+title: Finder
+---

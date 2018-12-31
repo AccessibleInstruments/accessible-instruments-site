@@ -1,0 +1,152 @@
+---
+layout: default
+---
+
+<div class="app" id="finder">
+  <div>
+    <form @submit.prevent="search">
+      <div class="sentence w">
+        <span>ability is</span>
+        <select class="ability" v-model="ops.ability">
+          <option value="" disabled selected></option>
+          <option value="visual">a visual impairment</option>
+          <option value="hearing">a hearing impairment</option>
+          <option value="mobility">mobility issues</option>
+          <option value="cognitive">a cognitive impairment</option>
+          <option value="dexterity">trouble with dexterity</option>
+          <option value="no-requirement">no accessibility requirements</option>
+        </select>
+        <span>interface is</span>
+        <select class="interface" v-model="ops.interface">
+          <option value="" disabled selected></option>
+          <option value="ipad">iPad</option>
+          <option value="software">Software</option>
+          <option value="hardware">Hardware</option>
+        </select>
+        <span>genre is</span>
+        <select class="genre" v-model="ops.genre">
+          <option value="" disabled selected></option>
+          <option value="electronic">Electronic</option>
+          <option value="hiphop">Hip-hop</option>
+          <option value="classical">Classical</option>
+        </select>
+      </div>
+      <div class="btn">
+        <input type="submit" class="cta" value="Search">
+        <div class="all" @click="searchAll">or view all</div>
+      </div>
+    </form>
+    <ul v-if="showList" class="list w">
+      <li v-for="item in instruments" :key="item.id">
+        <div class="image">
+          <img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']">
+        </div>
+        <div class="content">
+          <div class="text">
+            <h3>${item['fields']['item Name']}</h3>
+            <p>${item['fields']['Description']}</p>
+          </div>
+          <!-- <div class="more" @click="toggleExpanded(item)">Read more</div> -->
+          <div class="expanded" v-if="item.isExpanded">
+            <div class="tags">
+              <span>£${item.fields.Cost}</span>
+              <a :href="item.fields.Link" target="_blank">Go to product page</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#finder',
+    delimiters: ['${', '}'],
+    data: {
+      ops: {
+        ability: '',
+        interface: '',
+        genre: ''
+      },
+      showList: false,
+      fullInstruments: [],
+      instruments: []    
+    },
+    created() {
+      var self = this
+      var app_id = "app3nVvWgzRcCDlze";
+      var app_key = "keyqxNu7Mc6YHJeGs";
+      axios.get(
+        "https://api.airtable.com/v0/" + app_id + "/Instruments?view=Grid%20view", {
+          headers: {
+            Authorization: "Bearer " + app_key
+          }
+        }
+      ).then(resp => {
+        self.fullInstruments = resp.data.records.map(item => {
+          return {
+            ...item,
+            isExpanded: true
+          }
+        })
+      }).catch(e => {
+        console.log(e)
+      })
+    },
+    methods: {
+      toggleExpanded(inst) {
+        inst.isExpanded = !inst.isExpanded;
+      },
+      searchAll(){
+        this.instruments = this.fullInstruments;
+        this.showList = true;
+      },
+      search() {
+        // YOU NEED TO FILL THIS IN
+        switch(this.ops.ability) {
+          case('cognitive'):
+            this.instruments = this.fullInstruments.filter(inst => {
+              return inst.fields['Friendly for U12s'] === true;
+            })
+            break;
+          case('visual'):
+            this.instruments = this.fullInstruments.filter(inst => {
+              return inst.fields['FIELD TITLE'] === true;
+            })
+            break;
+        }
+
+        switch(this.ops.interface) {
+          case('ipad'):
+            this.instruments = this.fullInstruments.filter(inst => {
+              return inst.fields['FIELD TITLE'] === true;
+            })
+            break;
+          case('software'):
+            this.instruments = this.fullInstruments.filter(inst => {
+              return inst.fields['FIELD TITLE'] === true;
+            })
+            break;
+        }
+
+        switch(this.ops.genre) {
+          case('electronic'):
+            this.instruments = this.fullInstruments.filter(inst => {
+              return inst.fields['FIELD TITLE'] === true;
+            })
+            break;
+          case('classical'):
+            this.instruments = this.fullInstruments.filter(inst => {
+              return inst.fields['FIELD TITLE'] === true;
+            })
+            break;
+        }
+
+        this.showList = true;
+      }
+    }
+  })
+</script>

@@ -45,6 +45,8 @@ p {
   text-transform: uppercase;
   border-radius: 50em;
   margin-top: 0.5em;
+  border: none;
+  cursor: pointer;
 }
 
 header {
@@ -175,6 +177,73 @@ header li a {
 
 #framework article li {
   margin: 1em 1.5em;
+}
+
+#finder .sentence {
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 2em;
+  margin-top: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#finder .sentence select {
+  font-size: inherit;
+}
+
+#finder .btn {
+  text-align: center;
+}
+
+#finder form input {
+  font-size: 1em;
+  margin-top: 2em;
+}
+
+#finder .all {
+  font-size: 1.25em;
+  margin-top: 0.5em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#finder .list {
+  margin-top: 4em;
+  padding-left: 6em;
+  padding-right: 6em;
+}
+
+#finder li {
+  background: #f7f8f9;
+  margin-bottom: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#finder li img {
+  width: 8em;
+  margin-right: 1em;
+}
+
+#finder li .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#finder li .more {
+  text-decoration: underline;
+  text-align: right;
+  cursor: pointer;
+}
+
+#finder li .tags a {
+  color: inherit;
+  margin-left: 0.5em;
 }
 
 :target:before {
