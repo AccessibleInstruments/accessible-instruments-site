@@ -1,0 +1,266 @@
+:root {
+  --black: #1f2327;
+  --primary: rgb(102, 51, 153);
+  --font: "IBM Plex Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  color: var(--black);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#page {
+  padding: 1em;
+  flex: 1;
+}
+
+.w {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.cta {
+  background: rgb(123, 22, 255);
+  background-image: radial-gradient(at left top, rgb(123, 22, 255) 0%, rgb(68, 0, 204) 100%);
+  color: white;
+  padding: 1em 1.5em;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 50em;
+  margin-top: 0.5em;
+  border: none;
+  cursor: pointer;
+}
+
+header {
+  background: var(--black);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+}
+
+header .brand {
+  height: 3em;
+  display: block;
+}
+
+header img {
+  height: 100%;
+  display: block;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-left: 12.5px;
+}
+
+header li {
+  display: inline-block;
+}
+
+header li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 12.5px 12.5px 0;
+  text-transform: uppercase;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  padding: 2em 6em;
+}
+
+.hero h1 {
+  font-size: 3em;
+}
+
+.hero h2 {
+  font-size: 1.25em;
+}
+
+.hero p {
+  margin: 1em 0;
+}
+
+.hero img {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+#body-framework #page {
+  padding: 0;
+}
+
+#body-framework footer {
+  display: none;
+}
+
+#framework {
+  display: grid;
+  grid-template-columns: 400px auto;
+}
+
+#framework nav {
+  background: #f7f8f9;
+  overflow-y: scroll;
+  position: sticky;
+  top: 5em;
+  height: calc(100vh - 5em);
+  padding: 1em;
+}
+
+#framework nav h2 {
+  font-size: 1.25em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+#framework nav ul {
+  list-style-type: none;
+}
+
+#framework nav li ul {
+  padding-left: 1em;
+}
+
+#framework nav a {
+  color: inherit;
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+#framework article {
+  padding: 1em;
+}
+
+#framework article h1,
+#framework article h2,
+#framework article ul,
+#framework article p,
+#framework article img {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  display: block;
+  width: 100%;
+}
+
+#framework article h1:not(#introduction),
+#framework article h2 {
+  margin-top: 2em;
+}
+
+#framework article li {
+  margin: 1em 1.5em;
+}
+
+#finder .sentence {
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 2em;
+  margin-top: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#finder .sentence select {
+  font-size: inherit;
+}
+
+#finder .btn {
+  text-align: center;
+}
+
+#finder form input {
+  font-size: 1em;
+  margin-top: 2em;
+}
+
+#finder .all {
+  font-size: 1.25em;
+  margin-top: 0.5em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#finder .list {
+  margin-top: 4em;
+  padding-left: 6em;
+  padding-right: 6em;
+}
+
+#finder li {
+  background: #f7f8f9;
+  margin-bottom: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 1px solid lightgrey;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#finder li img {
+  width: 8em;
+  margin-right: 1em;
+}
+
+#finder li .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#finder li .more {
+  text-decoration: underline;
+  text-align: right;
+  cursor: pointer;
+}
+
+#finder li .tags a {
+  color: inherit;
+  margin-left: 0.5em;
+}
+
+:target:before {
+  content:"";
+  display:block;
+  height:5em; /* fixed header height*/
+  margin:-5em 0 0; /* negative fixed header height */
+}
+
+
+footer {
+  background: var(--black);
+  padding: 0.5em;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 2em;
+}
