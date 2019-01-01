@@ -43,7 +43,7 @@ layout: default
         </div>
         <div class="content">
           <div class="text">
-            <h3>${item['fields']['item Name']}</h3>
+            <h3>${item['fields']['Instrument Name']}</h3>
             <p>${item['fields']['Description']}</p>
           </div>
           <!-- <div class="more" @click="toggleExpanded(item)">Read more</div> -->
@@ -121,12 +121,12 @@ layout: default
 
         switch(this.ops.interface) {
           case('ipad'):
-            this.instruments = this.fullInstruments.filter(inst => {
+            this.instruments = this.instruments.filter(inst => {
               return inst.fields['FIELD TITLE'] === true;
             })
             break;
           case('software'):
-            this.instruments = this.fullInstruments.filter(inst => {
+            this.instruments = this.instruments.filter(inst => {
               return inst.fields['FIELD TITLE'] === true;
             })
             break;
@@ -134,12 +134,12 @@ layout: default
 
         switch(this.ops.genre) {
           case('electronic'):
-            this.instruments = this.fullInstruments.filter(inst => {
+            this.instruments = this.instruments.filter(inst => {
               return inst.fields['FIELD TITLE'] === true;
             })
             break;
           case('classical'):
-            this.instruments = this.fullInstruments.filter(inst => {
+            this.instruments = this.instruments.filter(inst => {
               return inst.fields['FIELD TITLE'] === true;
             })
             break;
