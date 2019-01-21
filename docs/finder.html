@@ -10,13 +10,13 @@
 <body id="body-finder">
   <header>
   <a href="/" class="brand">
-    <img src="assets/img/accessible-instruments-logo-w.png" alt="accessible instruments logo">
+    <img src="assets/img/ai-header-logo.svg" alt="accessible instruments logo">
   </a>
   <ul>
-    <li><a href="/framework">Framework</a></li>
-    <li><a href="/finder">Instrument Finder</a></li>
-    <li><a href="/community">Community</a></li>
     <li><a href="/about">About</a></li>
+    <li><a href="/finder">Instrument Finder</a></li>
+    <li><a href="/framework">Framework</a></li>
+    <li><a href="/community">Community</a></li>
   </ul>
 </header>
   <div id="page">
@@ -24,7 +24,7 @@
   <div>
     <form @submit.prevent="search">
       <div class="sentence w">
-        <span>ability is</span>
+        <span>I have</span>
         <select class="ability" v-model="ops.ability">
           <option value="" disabled selected></option>
           <option value="visual">a visual impairment</option>
@@ -34,20 +34,21 @@
           <option value="dexterity">trouble with dexterity</option>
           <option value="no-requirement">no accessibility requirements</option>
         </select>
-        <span>interface is</span>
+        <span>and I am looking for</span>
         <select class="interface" v-model="ops.interface">
           <option value="" disabled selected></option>
-          <option value="ipad">iPad</option>
+          <option value="ipad">an iPad app</option>
           <option value="software">Software</option>
           <option value="hardware">Hardware</option>
         </select>
-        <span>genre is</span>
+        <span>to make</span>
         <select class="genre" v-model="ops.genre">
           <option value="" disabled selected></option>
           <option value="electronic">Electronic</option>
           <option value="hiphop">Hip-hop</option>
           <option value="classical">Classical</option>
         </select>
+        <span>music.</span>
       </div>
       <div class="btn">
         <input type="submit" class="cta" value="Search">

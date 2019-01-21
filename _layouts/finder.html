@@ -6,7 +6,7 @@ layout: default
   <div>
     <form @submit.prevent="search">
       <div class="sentence w">
-        <span>ability is</span>
+        <span>I have</span>
         <select class="ability" v-model="ops.ability">
           <option value="" disabled selected></option>
           <option value="visual">a visual impairment</option>
@@ -16,20 +16,21 @@ layout: default
           <option value="dexterity">trouble with dexterity</option>
           <option value="no-requirement">no accessibility requirements</option>
         </select>
-        <span>interface is</span>
+        <span>and I am looking for</span>
         <select class="interface" v-model="ops.interface">
           <option value="" disabled selected></option>
-          <option value="ipad">iPad</option>
+          <option value="ipad">an iPad app</option>
           <option value="software">Software</option>
           <option value="hardware">Hardware</option>
         </select>
-        <span>genre is</span>
+        <span>to make</span>
         <select class="genre" v-model="ops.genre">
           <option value="" disabled selected></option>
           <option value="electronic">Electronic</option>
           <option value="hiphop">Hip-hop</option>
           <option value="classical">Classical</option>
         </select>
+        <span>music.</span>
       </div>
       <div class="btn">
         <input type="submit" class="cta" value="Search">
