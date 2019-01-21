@@ -85,7 +85,6 @@ header li a {
   color: white;
   text-decoration: none;
   padding: 12.5px 12.5px 0;
-  text-transform: uppercase;
 }
 
 .hero {
@@ -132,7 +131,7 @@ header li a {
   position: sticky;
   top: 5em;
   height: calc(100vh - 5em);
-  padding: 1em;
+  padding: 2em;
 }
 
 #framework nav h2 {
@@ -156,7 +155,7 @@ header li a {
 }
 
 #framework article {
-  padding: 1em;
+  padding: 2em;
 }
 
 #framework article h1,
