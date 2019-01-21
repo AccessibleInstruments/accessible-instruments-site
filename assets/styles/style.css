@@ -112,6 +112,10 @@ header li a {
   display: block;
 }
 
+#body-home #community {
+  width: 500px;
+}
+
 #body-framework #page {
   padding: 0;
 }
