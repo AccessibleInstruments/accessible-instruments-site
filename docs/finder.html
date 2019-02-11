@@ -48,6 +48,7 @@
           <option value="electronic">Electronic</option>
           <option value="hiphop">Hip-hop</option>
           <option value="classical">Classical</option>
+          <option value="any-genre">any type of</option>
         </select>
         <span>music.</span>
       </div>
@@ -139,12 +140,12 @@
             break;
           case ('hearing'):
             this.instruments = this.fullInstruments.filter(inst => {
-              return inst.fields['FIELD TITLE'] === true;
+              return inst.fields['Visual Feedback Given'] === true;
             })
             break;
           case ('mobility'):
             this.instruments = this.fullInstruments.filter(inst => {
-              return inst.fields['FIELD TITLE'] === true;
+              return inst.fields['FIELD TITLE'];
             })
             break;
           case ('dexterity'):
@@ -179,13 +180,23 @@
         switch(this.ops.genre) {
           case('electronic'):
             this.instruments = this.instruments.filter(inst => {
-              return inst.fields['FIELD TITLE'] === true;
+              return inst.fields['Electronic'] === true;
             })
             break;
           case('classical'):
             this.instruments = this.instruments.filter(inst => {
-              return inst.fields['FIELD TITLE'] === true;
+              return inst.fields['Classical'] === true;
             })
+            break;
+          case ('hiphop'):
+            this.instruments = this.instruments.filter(inst => {
+              return inst.fields['HipHop'] === true;
+            })
+            break;
+          case ('any-genre'):
+            this.instruments = this.instruments.filter(inst => {
+            return inst.fields['AnyGenre'] === true;
+          })
             break;
         }
 
