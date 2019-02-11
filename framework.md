@@ -2,11 +2,11 @@
 layout: framework
 title: Framework
 sections:
-  - name: Document Status
-    id: status
   - name: Welcome to the FAME Framework
-    id: welcome
+    id: introduction
     subsections:
+    - name: Document Status
+      id: status
     - name: Why is it needed?
       id: why
     - name: Who is it for?
@@ -48,17 +48,12 @@ sections:
 {:#introduction}
 # Facilitating Access to Musical Experiences (FAME) framework
 
-A framework to help digital musical instrument (DMI) creators understand accessible music making practices.
+Facilitating Access to Musical Experiences is a conceptual framework that provides guidance for creating Accessible Digital Musical Instruments (ADMIs) that can be used within facilitated performance and related accessible music making activities.
 
 {:#status}
 ## Document Status
 
 * Version: 1.0 (Draft) Amy Dickens, 18th January 2019
-
-{:#welcome}
-# Welcome to the FAME Framework
-
-Facilitating Access to Musical Experiences is a conceptual framework that provides guidance for creating Accessible Digital Musical Instruments (ADMIs) that can be used within facilitated performance and related accessible music making activities.
 
 {:#why}
 ## Why is this framework needed?

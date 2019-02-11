@@ -34,7 +34,7 @@ layout: default
       </div>
       <div class="btn">
         <input type="submit" class="cta" value="Search">
-        <div class="all" @click="searchAll">or view all</div>
+        <div class="all" @click="searchAll">view all</div>
       </div>
     </form>
     <ul v-if="showList" class="list w">
@@ -44,7 +44,7 @@ layout: default
         </div>
         <div class="content">
           <div class="text">
-            <h3>${item['fields']['Instrument Name']}</h3>
+            <h3>${item['fields']['Instrument Name']}</h3><h4> by ${item['fields']['Manufacturer']}</h4>
             <p>${item['fields']['Description']}</p>
           </div>
           <!-- <div class="more" @click="toggleExpanded(item)">Read more</div> -->
@@ -78,8 +78,8 @@ layout: default
     },
     created() {
       var self = this
-      var app_id = "app3nVvWgzRcCDlze";
-      var app_key = "keyqxNu7Mc6YHJeGs";
+      var app_id = "appUCVeKSZe5pjbH8";
+      var app_key = "keyzCFl1ce6lYRKja";
       axios.get(
         "https://api.airtable.com/v0/" + app_id + "/Instruments?view=Grid%20view", {
           headers: {
@@ -106,29 +106,53 @@ layout: default
         this.showList = true;
       },
       search() {
-        // YOU NEED TO FILL THIS IN
+        // SEARCH CASES FOR EACH OF THE OPTIONS IN THE FORM
         switch(this.ops.ability) {
           case('cognitive'):
             this.instruments = this.fullInstruments.filter(inst => {
-              return inst.fields['Friendly for U12s'] === true;
+              return inst.fields['Low Cognitive Load'] === true;
             })
             break;
           case('visual'):
             this.instruments = this.fullInstruments.filter(inst => {
+              return !inst.fields['Reliant on Visual UI']
+            })
+            break;
+          case ('hearing'):
+            this.instruments = this.fullInstruments.filter(inst => {
               return inst.fields['FIELD TITLE'] === true;
             })
+            break;
+          case ('mobility'):
+            this.instruments = this.fullInstruments.filter(inst => {
+              return inst.fields['FIELD TITLE'] === true;
+            })
+            break;
+          case ('dexterity'):
+            this.instruments = this.fullInstruments.filter(inst => {
+              return inst.fields['FIELD TITLE'] === true;
+            })
+            break;
+          case ('no-requirement'):
+            this.instruments = this.fullInstruments;
+            this.showList = true;
             break;
         }
 
         switch(this.ops.interface) {
           case('ipad'):
             this.instruments = this.instruments.filter(inst => {
-              return inst.fields['FIELD TITLE'] === true;
+              return inst.fields['Application'] === true;
             })
             break;
-          case('software'):
+          case('hardware'):
             this.instruments = this.instruments.filter(inst => {
-              return inst.fields['FIELD TITLE'] === true;
+              return inst.fields['Hardware'] === true;
+            })
+            break;
+          case ('software'):
+            this.instruments = this.instruments.filter(inst => {
+              return inst.fields['Software'] === true;
             })
             break;
         }
