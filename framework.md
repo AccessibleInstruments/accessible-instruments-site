@@ -7,8 +7,6 @@ sections:
     subsections:
     - name: Document Status
       id: status
-    - name: Why is it needed?
-      id: why
     - name: Who is it for?
       id: who
     - name: What does it look at?
@@ -48,28 +46,26 @@ sections:
 {:#introduction}
 # Facilitating Access to Musical Experiences (FAME) framework
 
-Facilitating Access to Musical Experiences is a conceptual framework that provides guidance for creating Accessible Digital Musical Instruments (ADMIs) that can be used within facilitated performance and related accessible music making activities.
+Facilitating Access to Musical Experiences (FAME) is a framework that helps Digital Musical Instrument (DMI) designers and developers better understand facilitated performance and other accessible music making practices.
+
+There are three ways in which the FAME framework does this:  
+1. Explaining Facilitated Performance - including the stakeholders, activities and roles that are part of accesible music making.
+2. Providing guidance for using DMIs in Facilitated Performance
+3. The DMI Accessibility checklist - provides a checklist tool for evaluating the accessibility features of a DMI.
+
+The FAME framework aims to **promote accessibility as a foundation** for Digital Musical Instruments and related technologies. 
+
+Through **sharing knowledge** about accessible music making, **providing guidance** on the affordances for accessibility within spefic technologies and encouraging DMI creators to adopt **better practices** regarding accessibility. 
 
 {:#status}
 ## Document Status
 
 * Version: 1.0 (Draft) Amy Dickens, 18th January 2019
 
-{:#why}
-## Why is this framework needed?
-
-Recently accessible music making community groups have adopted the use of technology within their activities. Digital Musical Instruments (DMIs) are being used within these groups to provide access to music making for people who ordinarily may not be able to use traditional instruments. However not all DMIs are well suited to accessible music making activities. Many of these groups will spend time testing out different DMIs for different people and sometimes even "hacking" or adapting technologies to better suit an individuals abilities.
-
-Sharing knowledge about the activities of "Facilitated Perfomance" and the requirements for this space can help DMI creators better understand the design considerations for this context.
-
-The FAME framework aims to **promote accessibility as a foundation** for Digital Musical Instruments and related technologies. Through **sharing knowledge** about accessible music making, **providing guidance** on the affordances for accessibility within spefic technologies and encouraging DMI creators to adopt **better practices** regarding accessibility.
-
-Enabling access to DMIs, highlights the creative abilities of those who ordinarily may not be able to engage in performing with music. Research and developments in this area, have the potential to impact upon a larger community by creating access to music technologies for a wider audience.
-
 {:#who}
 ## Who is it for?
 
-The people who may find this framework useful in their practices fall under three categories:
+The following groups of people may find FAME useful:
 
 1. Digital Musical Instrument Creators
 2. Accessible Music Making Communities
@@ -113,7 +109,7 @@ Finally, such a framework may be of use to any person conducting research in the
 The areas outlined are purposefully broad. Researchers are advised to read the next section "What does it look at?" for information on the academic reach of this particular framework.
 
 {:#what}
-## What does it look at?
+## The limits of the FAME Framework
 
 The FAME framework considers the accessibility requirements of digital musical instruments in the context of facilitated performance and related activities, which are outlined in the "What is Facilitated Performance?" section. 
 

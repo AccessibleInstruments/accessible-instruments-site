@@ -169,20 +169,37 @@ header li a {
   padding: 2em;
 }
 
-#framework article h1,
+#framework article h1 {
+  font-size: 2em;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
 #framework article h2,
+#framework article h3,
+#framework article h4,
 #framework article ul,
+#framework article ol,
 #framework article p,
 #framework article img {
-  margin-top: 0;
-  margin-bottom: 0.5em;
+  margin: 0 auto;
   display: block;
-  width: 100%;
+  width: 50%;
 }
 
 #framework article h1:not(#introduction),
-#framework article h2 {
+#framework article h2,
+#framework article h3 {
   margin-top: 2em;
+}
+
+#framework article p {
+  padding: 0.5em 0;
+}
+
+#framework article p strong {
+  font-weight: bold;
 }
 
 #framework article li {
